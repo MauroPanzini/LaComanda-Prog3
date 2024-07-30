@@ -1,0 +1,1386 @@
+{
+	"info": {
+		"_postman_id": "6fc0f30f-38b9-4ef6-b365-33b5bb50fbff",
+		"name": "Comanda-Prog3",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "34747613"
+	},
+	"item": [
+		{
+			"name": "Login",
+			"item": [
+				{
+					"name": "LoginSocio/Admin",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{Socio}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "",
+								"value": "",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "nombre",
+									"value": "Mau",
+									"type": "text"
+								},
+								{
+									"key": "clave",
+									"value": "1234",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{RutaTP}}login",
+							"host": [
+								"{{RutaTP}}login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "LoginMozo",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{MozoToken}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "nombre",
+									"value": "Mozo1",
+									"type": "text"
+								},
+								{
+									"key": "clave",
+									"value": "1234",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{RutaTP}}login",
+							"host": [
+								"{{RutaTP}}login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "LoginCocinero",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{CocineroToken}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "nombre",
+									"value": "Cocinero1",
+									"type": "text"
+								},
+								{
+									"key": "clave",
+									"value": "1234",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{RutaTP}}login",
+							"host": [
+								"{{RutaTP}}login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "LoginBartender",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{BartenderToken}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "nombre",
+									"value": "Bartender1",
+									"type": "text"
+								},
+								{
+									"key": "clave",
+									"value": "1234",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{RutaTP}}login",
+							"host": [
+								"{{RutaTP}}login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "LoginCervecero",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{CerveceroToken}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "nombre",
+									"value": "Cervecero1",
+									"type": "text"
+								},
+								{
+									"key": "clave",
+									"value": "1234",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{RutaTP}}login",
+							"host": [
+								"{{RutaTP}}login"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "EntregaPuntos1a16",
+			"item": [
+				{
+					"name": "CrearPedido",
+					"item": [
+						{
+							"name": "VincularMesayCliente",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{MozoToken}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "",
+										"type": "text",
+										"disabled": true
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "codigoMesa",
+											"value": "jAs9y",
+											"type": "text"
+										},
+										{
+											"key": "nombreCliente",
+											"value": "Comensal",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{RutaTP}}pedidos/VincularPedido",
+									"host": [
+										"{{RutaTP}}pedidos"
+									],
+									"path": [
+										"VincularPedido"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "CrearComanda",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{MozoToken}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE3MjA0NDc3NjAsImV4cCI6MTcyMDUwNzc2MCwiYXVkIjoiMzdmNTYzYTczYWNmNTg5NDNmMWE3M2FjNTJhNDkyNGIyOWU0Mjk5ZiIsImRhdGEiOnsiaWRVc3VhcmlvIjoyLCJzZWN0b3IiOiJtb3pvIn0sImFwcCI6IkxhX0NvbWFuZGEifQ.MNcYYz5AHbQmZ6nUkHBwcQVjdkfsBrH0kux6-kGb7_U",
+										"type": "text",
+										"disabled": true
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "codigoPedido",
+											"value": "",
+											"type": "text"
+										},
+										{
+											"key": "idProductos",
+											"value": "[1,2,3,4]",
+											"type": "text"
+										},
+										{
+											"key": "cantidades",
+											"value": "[1, 2, 1, 1]",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{RutaTP}}pedidosProductos/CargarProductosAlPedido",
+									"host": [
+										"{{RutaTP}}pedidosProductos"
+									],
+									"path": [
+										"CargarProductosAlPedido"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "AdjuntarImagen",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{MozoToken}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "codigoMesa",
+											"value": "jAs9y",
+											"type": "text"
+										},
+										{
+											"key": "foto",
+											"type": "file",
+											"src": "/C:/Users/Mau/Downloads/short chelsea.jpeg"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{RutaTP}}pedidos/AdjuntarFotoMesa",
+									"host": [
+										"{{RutaTP}}pedidos"
+									],
+									"path": [
+										"AdjuntarFotoMesa"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "TomarPedido",
+					"item": [
+						{
+							"name": "ListarPendientesCervecero",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{CocineroToken}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": []
+								},
+								"url": {
+									"raw": "{{RutaTP}}pedidosProductos/listaPedidosPendientes",
+									"host": [
+										"{{RutaTP}}pedidosProductos"
+									],
+									"path": [
+										"listaPedidosPendientes"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "ListarPendientesCocinero",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{CocineroToken}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": []
+								},
+								"url": {
+									"raw": "{{RutaTP}}pedidosProductos/listaPedidosPendientes",
+									"host": [
+										"{{RutaTP}}pedidosProductos"
+									],
+									"path": [
+										"listaPedidosPendientes"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "ListarPendientesBartender",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{BartenderToken}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": []
+								},
+								"url": {
+									"raw": "{{RutaTP}}pedidosProductos/listaPedidosPendientes",
+									"host": [
+										"{{RutaTP}}pedidosProductos"
+									],
+									"path": [
+										"listaPedidosPendientes"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "TomarPedidoCervecero",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{CocineroToken}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "id",
+											"value": "56",
+											"type": "text"
+										},
+										{
+											"key": "tiempoPreparacion",
+											"value": "10",
+											"type": "text"
+										},
+										{
+											"key": "estado",
+											"value": "en preparacion",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{RutaTP}}pedidosProductos/tomarPedido",
+									"host": [
+										"{{RutaTP}}pedidosProductos"
+									],
+									"path": [
+										"tomarPedido"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "TomarPedidoCocinero",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{CocineroToken}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "id",
+											"value": "56",
+											"type": "text"
+										},
+										{
+											"key": "tiempoPreparacion",
+											"value": "10",
+											"type": "text"
+										},
+										{
+											"key": "estado",
+											"value": "en preparacion",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{RutaTP}}pedidosProductos/tomarPedido",
+									"host": [
+										"{{RutaTP}}pedidosProductos"
+									],
+									"path": [
+										"tomarPedido"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "TomarPedidoBartender",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{BartenderToken}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "id",
+											"value": "56",
+											"type": "text"
+										},
+										{
+											"key": "tiempoPreparacion",
+											"value": "10",
+											"type": "text"
+										},
+										{
+											"key": "estado",
+											"value": "en preparacion",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{RutaTP}}pedidosProductos/tomarPedido",
+									"host": [
+										"{{RutaTP}}pedidosProductos"
+									],
+									"path": [
+										"tomarPedido"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "ConsultarPedido",
+					"item": [
+						{
+							"name": "ClienteConsultaTiempoPedido",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE3MjA0MTMwOTksImV4cCI6MTcyMDQ3MzA5OSwiYXVkIjoiYWFiZWY2YzFmOGYzMzZlMzUyOWM0YzFjZTQwYWVmMGU1ZjQ3MzRiNyIsImRhdGEiOnsiaWRVc3VhcmlvIjoxLCJzZWN0b3IiOiJhZG1pbiJ9LCJhcHAiOiJMYV9Db21hbmRhIn0.DPs1EcY8gDg_9EYWTIfQD3_kspqppivjjHMZKTVkH24",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "codigoMesa",
+											"value": "jAs9y",
+											"type": "text"
+										},
+										{
+											"key": "codigoPedido",
+											"value": "UPDNk",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{RutaTP}}clientes/ConsultarTiempoPedido",
+									"host": [
+										"{{RutaTP}}clientes"
+									],
+									"path": [
+										"ConsultarTiempoPedido"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "SocioConsultaTiempoPedido",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{SocioToken}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "codigoPedido",
+											"value": "UPDNk",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{RutaTP}}socios/generarTiempoPedido",
+									"host": [
+										"{{RutaTP}}socios"
+									],
+									"path": [
+										"generarTiempoPedido"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "TerminarPedido",
+					"item": [
+						{
+							"name": "ListarPedidosEnPreparacionCocinero",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{CocineroToken}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{CocineroToken}}",
+										"type": "text",
+										"disabled": true
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": []
+								},
+								"url": {
+									"raw": "{{RutaTP}}pedidosProductos/listaPedidosEnPreparacion",
+									"host": [
+										"{{RutaTP}}pedidosProductos"
+									],
+									"path": [
+										"listaPedidosEnPreparacion"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "ListarPedidosEnPreparacionBartender",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{BartenderToken}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{CocineroToken}}",
+										"type": "text",
+										"disabled": true
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": []
+								},
+								"url": {
+									"raw": "{{RutaTP}}pedidosProductos/listaPedidosEnPreparacion",
+									"host": [
+										"{{RutaTP}}pedidosProductos"
+									],
+									"path": [
+										"listaPedidosEnPreparacion"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "ListarPedidosEnPreparacionCervecero",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{CerveceroToken}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{CocineroToken}}",
+										"type": "text",
+										"disabled": true
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": []
+								},
+								"url": {
+									"raw": "{{RutaTP}}pedidosProductos/listaPedidosEnPreparacion",
+									"host": [
+										"{{RutaTP}}pedidosProductos"
+									],
+									"path": [
+										"listaPedidosEnPreparacion"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "TerminarPreparacionBartender",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{BartenderToken}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "id",
+											"value": "74",
+											"type": "text"
+										},
+										{
+											"key": "estado",
+											"value": "listo para servir",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{RutaTP}}pedidosProductos/terminarPreparacionProducto",
+									"host": [
+										"{{RutaTP}}pedidosProductos"
+									],
+									"path": [
+										"terminarPreparacionProducto"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "TerminarPreparacionCocinero",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{CocineroToken}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "id",
+											"value": "74",
+											"type": "text"
+										},
+										{
+											"key": "estado",
+											"value": "listo para servir",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{RutaTP}}pedidosProductos/terminarPreparacionProducto",
+									"host": [
+										"{{RutaTP}}pedidosProductos"
+									],
+									"path": [
+										"terminarPreparacionProducto"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "TerminarPreparacionCervecero",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{CerveceroToken}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "id",
+											"value": "74",
+											"type": "text"
+										},
+										{
+											"key": "estado",
+											"value": "listo para servir",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{RutaTP}}pedidosProductos/terminarPreparacionProducto",
+									"host": [
+										"{{RutaTP}}pedidosProductos"
+									],
+									"path": [
+										"terminarPreparacionProducto"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "PedidoEnPosesiónDeMozo",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{MozoToken}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": []
+								},
+								"url": {
+									"raw": "{{RutaTP}}pedidosProductos/pedidosListos",
+									"host": [
+										"{{RutaTP}}pedidosProductos"
+									],
+									"path": [
+										"pedidosListos"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "CerrarPedido",
+					"item": [
+						{
+							"name": "VerEstadoMesas",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{SocioToken}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": []
+								},
+								"url": {
+									"raw": "{{RutaTP}}mesas/",
+									"host": [
+										"{{RutaTP}}mesas"
+									],
+									"path": [
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "CobrarMesa",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{SocioToken}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "codigoMesa",
+											"value": "jAs9y",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{RutaTP}}mesas/cobrarMesa",
+									"host": [
+										"{{RutaTP}}mesas"
+									],
+									"path": [
+										"cobrarMesa"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "CerrarMesa",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{SocioToken}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "codigoMesa",
+											"value": "jAs9y",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{RutaTP}}mesas/cerrarMesa",
+									"host": [
+										"{{RutaTP}}mesas"
+									],
+									"path": [
+										"cerrarMesa"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "CalificarMesa",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "codigoMesa",
+											"value": "jAs9y",
+											"type": "text"
+										},
+										{
+											"key": "codigoPedido",
+											"value": "UPDNk",
+											"type": "text"
+										},
+										{
+											"key": "puntajeMozo",
+											"value": "8",
+											"type": "text"
+										},
+										{
+											"key": "puntajeMesa",
+											"value": "5",
+											"type": "text"
+										},
+										{
+											"key": "puntajeRestaurante",
+											"value": "7",
+											"type": "text"
+										},
+										{
+											"key": "puntajeCocinero",
+											"value": "8",
+											"type": "text"
+										},
+										{
+											"key": "descripcion",
+											"value": "Bueno",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{RutaTP}}clientes/cargaEncuesta",
+									"host": [
+										"{{RutaTP}}clientes"
+									],
+									"path": [
+										"cargaEncuesta"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Estadísticas",
+					"item": [
+						{
+							"name": "MostrarMejoresComentarios",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{SocioToken}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "codigoMesa",
+											"value": "k00U5",
+											"type": "text"
+										},
+										{
+											"key": "codigoPedido",
+											"value": "Kk26Y",
+											"type": "text"
+										},
+										{
+											"key": "puntajeMozo",
+											"value": "4",
+											"type": "text"
+										},
+										{
+											"key": "puntajeMesa",
+											"value": "5",
+											"type": "text"
+										},
+										{
+											"key": "puntajeRestaurante",
+											"value": "3",
+											"type": "text"
+										},
+										{
+											"key": "puntajeCocinero",
+											"value": "6",
+											"type": "text"
+										},
+										{
+											"key": "descripcion",
+											"value": "medio pelo",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{RutaTP}}socios/encuestas/ListarMejoresComentarios",
+									"host": [
+										"{{RutaTP}}socios"
+									],
+									"path": [
+										"encuestas",
+										"ListarMejoresComentarios"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "MesaMasUsada",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{SocioToken}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{RutaTP}}socios/mesaMasUsada",
+									"host": [
+										"{{RutaTP}}socios"
+									],
+									"path": [
+										"mesaMasUsada"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Demorados",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{SocioToken}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{RutaTP}}pedidos/Demorados",
+									"host": [
+										"{{RutaTP}}pedidos"
+									],
+									"path": [
+										"Demorados"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Archivos",
+			"item": [
+				{
+					"name": "CargaCSV",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{RutaTP}}mesas/GuardarCSV",
+							"host": [
+								"{{RutaTP}}mesas"
+							],
+							"path": [
+								"GuardarCSV"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Descargapdf",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{RutaTP}}pdf",
+							"host": [
+								"{{RutaTP}}pdf"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "RutaTP",
+			"value": "http://localhost/LaComanda-Prog3/app/"
+		},
+		{
+			"key": "CocineroToken",
+			"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE3MjIyNjYzNzUsImV4cCI6MTcyMjMyNjM3NSwiYXVkIjoiNDYzNmRiMmMwMzM4OTdhNzM4YjRhNjM3MzlmZGQzZTJkOTRhNGI0NCIsImRhdGEiOnsiaWRVc3VhcmlvIjozLCJzZWN0b3IiOiJjb2NpbmVybyJ9LCJhcHAiOiJMYV9Db21hbmRhIn0.6JWVYmWbsP7ZSIaa1dfHwgtDK1JOSMAyRagpkA-7VT8"
+		},
+		{
+			"key": "SocioToken",
+			"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE3MjIyNjYyNzMsImV4cCI6MTcyMjMyNjI3MywiYXVkIjoiNDYzNmRiMmMwMzM4OTdhNzM4YjRhNjM3MzlmZGQzZTJkOTRhNGI0NCIsImRhdGEiOnsiaWRVc3VhcmlvIjoxLCJzZWN0b3IiOiJhZG1pbiJ9LCJhcHAiOiJMYV9Db21hbmRhIn0.0d0wg7gm_0MCCvn-1rqteyZ_wbLvRhn9ftLHRt5-GEo"
+		},
+		{
+			"key": "MozoToken",
+			"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE3MjIyNjYzNTMsImV4cCI6MTcyMjMyNjM1MywiYXVkIjoiNDYzNmRiMmMwMzM4OTdhNzM4YjRhNjM3MzlmZGQzZTJkOTRhNGI0NCIsImRhdGEiOnsiaWRVc3VhcmlvIjoyLCJzZWN0b3IiOiJtb3pvIn0sImFwcCI6IkxhX0NvbWFuZGEifQ.HwAL_MI938ku2988lKyMXFWbzP1wfnBLgFHxxFJrunw"
+		},
+		{
+			"key": "BartenderToken",
+			"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE3MjIyNjY0MTQsImV4cCI6MTcyMjMyNjQxNCwiYXVkIjoiNDYzNmRiMmMwMzM4OTdhNzM4YjRhNjM3MzlmZGQzZTJkOTRhNGI0NCIsImRhdGEiOnsiaWRVc3VhcmlvIjo0LCJzZWN0b3IiOiJiYXJ0ZW5kZXIifSwiYXBwIjoiTGFfQ29tYW5kYSJ9.5S6rtsg83jX83Fcj3MQBTawoR1otmAYTGy3VSwZGvAk"
+		},
+		{
+			"key": "CerveceroToken",
+			"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE3MjIyNjY0MzUsImV4cCI6MTcyMjMyNjQzNSwiYXVkIjoiNDYzNmRiMmMwMzM4OTdhNzM4YjRhNjM3MzlmZGQzZTJkOTRhNGI0NCIsImRhdGEiOnsiaWRVc3VhcmlvIjo2LCJzZWN0b3IiOiJjZXJ2ZWNlcm8ifSwiYXBwIjoiTGFfQ29tYW5kYSJ9.r2CjisGbBa-RlLD_-u-g9S3Gh3mOZSUxqAJ0uFYKgBY"
+		}
+	]
+}
